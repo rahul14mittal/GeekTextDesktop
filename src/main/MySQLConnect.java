@@ -5,8 +5,8 @@ import java.sql.*;
 public class MySQLConnect {
 
 	final private String host = "localhost"; // default host is localhost
-	final private String user = "root"; // default user is root
-	final private String passwd = "rahul"; // edit this with your own password for MySQL
+	final private String user = "amoli"; // default user is root
+	final private String passwd = "fuH^sujE*n^@"; // edit this with your own password for MySQL
 	final private String db = "geektext";
 
 	private Connection connect;
