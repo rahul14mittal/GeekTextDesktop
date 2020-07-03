@@ -8,6 +8,8 @@ public class Main {
 		
 		MySQLConnect sql = new MySQLConnect();
 		sql.readDatabase();
+		
+		
 
 	}
 

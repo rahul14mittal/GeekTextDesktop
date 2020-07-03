@@ -6,7 +6,7 @@ public class MySQLConnect {
 
 	final private String host = "localhost"; // default host is localhost
 	final private String user = "root"; // default user is root
-	final private String passwd = "rahul"; // edit this with your own password for MySQL
+	final private String passwd = "6119200"; // edit this with your own password for MySQL
 	final private String db = "geektext";
 
 	private Connection connect;
