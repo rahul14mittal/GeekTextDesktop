@@ -5,18 +5,24 @@ import java.sql.*;
 public class MySQLConnect {
 
 	final private String host = "localhost"; // default host is localhost
-	final private String user = "amoli"; // default user is root
-	final private String passwd = "fuH^sujE*n^@"; // edit this with your own password for MySQL
+	private String user, passwd;
 	final private String db = "geektext";
 
 	private Connection connect;
 	private Statement statement;
 	private ResultSet resultSet;
 
+	public MySQLConnect(String user, String passwd)
+	{
+		this.user = user;
+		this.passwd = passwd;
+	}
+	
 	public void readDatabase() throws Exception {
+
 		// This will load the MySQL driver, each DB has its own driver
 		Class.forName("com.mysql.cj.jdbc.Driver");
-
+		
 		// Setup the connection with the DB
 		connect = DriverManager.getConnection("jdbc:mysql://" + host + "/"+db+"?" + "user=" + user + "&password=" + passwd );
 		   
