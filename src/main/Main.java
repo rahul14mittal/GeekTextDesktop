@@ -1,6 +1,7 @@
 package main;
 
 import java.util.Scanner;
+import features.BookDetails;
 
 public class Main {
 
@@ -13,8 +14,13 @@ public class Main {
 		String passwd = sc.nextLine();
 		
 		MySQLConnect sql = new MySQLConnect(user, passwd);
-		sql.readDatabase();
-
+		sql.connect();
+		System.out.println("Connection successful.");
+		BookDetails bd = new BookDetails(sql);
+		sql.writeMetaData(bd.getBookDetails("0189"));
+		
 	}
+	
+	
 
 }
