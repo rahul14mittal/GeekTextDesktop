@@ -42,16 +42,20 @@ public class MySQLConnect {
 		// Result set get the result of the SQL query
 
 		System.out.println("The columns in the table are: ");
-
 		System.out.println("Table: " + resultSet.getMetaData().getTableName(1));
-
-			System.out.println(resultSet.getMetaData());
+		System.out.println(resultSet.getMetaData());
 		
 	}
 	
 	public void getInfo(ResultSet resultSet) throws SQLException {
 		
-		
+		int size = 7;
+		resultSet.next();
+		//resultSet.getArray(1);
+		for (int col = 1; col < size; col++ )
+		{
+			System.out.println(resultSet.getString(col));
+		}
 	}
 
 }

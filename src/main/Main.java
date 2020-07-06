@@ -17,7 +17,7 @@ public class Main {
 		sql.connect();
 		System.out.println("Connection successful.");
 		BookDetails bd = new BookDetails(sql);
-		sql.writeMetaData(bd.getBookDetails("0189"));
+		sql.getInfo(bd.getBookDetails("0189"));
 		
 	}
 	
