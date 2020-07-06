@@ -16,7 +16,10 @@ public class Main {
 		MySQLConnect sql = new MySQLConnect(user, passwd);
 		sql.connect();
 		System.out.println("Connection successful.");
-
+		
+		/* Adam's Feature Object
+		UserReview myRev = new UserReview(sql);
+		*/
 		
 		//BookBrowsing bb = new BookBrowsing(sql);
         //bb.runFeature();
