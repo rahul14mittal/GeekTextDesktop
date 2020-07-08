@@ -20,7 +20,7 @@ public class BookDetails {
     public void runFeature() throws Exception
     {
     	getBookDetails("0189");
-    	//createAuthor(28, "white","walter","bio","hhh");
+    	createAuthor(28, "white","walter","bio","hhh");
     }
 	
 	public void createBook(int bookNum, String title, String description, double price, 
@@ -33,14 +33,12 @@ public class BookDetails {
 	public void createAuthor(int authorNum, String firstName, String lastName, String bio, String pub) throws Exception
 	{
 		statement.executeUpdate("INSERT INTO Author Values ("+authorNum+ ", '" +lastName+ "', '"+ firstName+ "', '" +bio+ "', '" +pub +"');");
-		
 	}
 	
 	public void getBookDetails(String bookNum) throws Exception 
 	{
-		System.out.println("here");
 		resultSet = statement.executeQuery("select * from BookDetails where bookCode = " + bookNum);
 		ResultSetMetaData metaData = resultSet.getMetaData();
-		sql.getInfo(resultSet);
+		sql.printResult(resultSet);
 	}
 }
