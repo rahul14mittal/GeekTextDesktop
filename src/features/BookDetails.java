@@ -27,30 +27,17 @@ public class BookDetails {
 		
 	}
 	
+	public void createAuthor(String firstName, String lastName, String bio, String pub) 
+	{
+		
+	}
+	
 	public void getBookDetails(String bookNum) throws Exception 
 	{
 	    connect = sql.getConnect();
 	    statement = connect.createStatement();
 		resultSet = statement.executeQuery("select * from BookDetails where bookCode = " + bookNum);
 		ResultSetMetaData metaData = resultSet.getMetaData();
-		int size = 7;
-		//resultSet.getArray(1);
-		while(resultSet.next())
-		{
-			for(int col = 1; col <= metaData.getColumnCount(); col ++)
-			{
-
-				System.out.println(metaData.getColumnName(col) + ": " + resultSet.getString(col));
-			}
-		}
-		/*while(resultSet.next())
-		{
-			System.out.println("here");
-			System.out.println(resultSet.getString(1));
-			
-		}*/
+		sql.getInfo(resultSet);
 	}
-	
-	
-
 }

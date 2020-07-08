@@ -47,14 +47,16 @@ public class MySQLConnect {
 		
 	}
 	
-	public void getInfo(ResultSet resultSet) throws SQLException {
-		
-		int size = 7;
-		resultSet.next();
-		//resultSet.getArray(1);
-		for (int col = 1; col < size; col++ )
+	public void getInfo(ResultSet resultSet) throws SQLException 
+	{
+		ResultSetMetaData metaData = resultSet.getMetaData();
+		while(resultSet.next())
 		{
-			System.out.println(resultSet.getString(col));
+			for(int col = 1; col <= metaData.getColumnCount(); col ++)
+			{
+
+				System.out.println(metaData.getColumnName(col) + ": " + resultSet.getString(col));
+			}
 		}
 	}
 
