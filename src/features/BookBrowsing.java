@@ -27,8 +27,9 @@ public class BookBrowsing {
     public void runFeature() throws SQLException
     {
 //    	browseByGenre("FIC");
-    	browseTopSellers();
-
+//    	browseTopSellers();
+//    	browseByRating(2.4);
+    	browseByNumber(2);
     }
     
     public void browseByGenre(String genre) throws SQLException
@@ -39,7 +40,22 @@ public class BookBrowsing {
     
     public void browseTopSellers() throws SQLException
     {
-    	resultSet = statement.executeQuery("select copiesSold from BookDetails order by copiesSold DESC LIMIT 10");
+    	resultSet = statement.executeQuery("select * from BookDetails order by copiesSold DESC LIMIT 10");
 		sql.printResult(resultSet);
     }
+    
+    public void browseByRating(double rating) throws SQLException
+    {
+    	resultSet = statement.executeQuery("select * from BookDetails where averageRating >"+rating);
+		sql.printResult(resultSet);
+    }
+    
+    public void browseByNumber(int num) throws SQLException
+    {
+    	resultSet = statement.executeQuery("select * from BookDetails LIMIT "+num);
+		sql.printResult(resultSet);
+    }
+    
+    
+    
     }
