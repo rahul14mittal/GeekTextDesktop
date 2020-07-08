@@ -47,7 +47,7 @@ public class MySQLConnect {
 		
 	}
 	
-	public void getInfo(ResultSet resultSet) throws SQLException 
+	public void printResult(ResultSet resultSet) throws SQLException 
 	{
 		ResultSetMetaData metaData = resultSet.getMetaData();
 		while(resultSet.next())
@@ -57,6 +57,7 @@ public class MySQLConnect {
 
 				System.out.println(metaData.getColumnName(col) + ": " + resultSet.getString(col));
 			}
+			System.out.println("------------");
 		}
 	}
 
