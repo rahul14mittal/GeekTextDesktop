@@ -17,14 +17,14 @@ public class Main {
 		sql.connect();
 		System.out.println("Connection successful.");
 		
-//        BookDetails bd = new BookDetails(sql);
-//        bd.runFeature();
+        //BookDetails bd = new BookDetails(sql);
+        //bd.runFeature();
 		/* Adam's Feature Object
 		UserReview myRev = new UserReview(sql);
 		*/
 		
-		BookBrowsing bb = new BookBrowsing(sql);
-        bb.runFeature();
+		//BookBrowsing bb = new BookBrowsing(sql);
+        //bb.runFeature();
 
 
 
