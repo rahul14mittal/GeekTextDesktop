@@ -73,6 +73,8 @@ public class MySQLConnect {
 			// execute query
 			statement.execute(line);
 		}
+		
+		System.out.println(sqlPath+" executed");
 
 		// close file reader
 		if (reader != null) {
