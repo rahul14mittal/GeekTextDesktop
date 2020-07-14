@@ -22,7 +22,7 @@ public class BookDetails {
     	getBookDetails("0189");
     	//createAuthor(28, "white","walter","bio","hhh");
     	//createBook("2525","25", "Harry Potter","BAN", "20.35", "FIC", "2018", "20", "desc", "default");
-    	findBookByAuthor("schrader");
+//    	findBookByAuthor("schrader");
     }
 	
 	public void createBook(String bookCode, String authorNum,String title, String description, String price, 
