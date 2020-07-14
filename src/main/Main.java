@@ -19,9 +19,9 @@ public class Main {
 		
         //BookDetails bd = new BookDetails(sql);
         //bd.runFeature();
-		/* Adam's Feature Object
+		 //Adam's Feature Object
 		UserReview myRev = new UserReview(sql);
-		*/
+		myRev.runFeature();
 		
 		//BookBrowsing bb = new BookBrowsing(sql);
         //bb.runFeature();
