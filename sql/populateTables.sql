@@ -1,0 +1,10 @@
+INSERT INTO author (authorNum,authorLast,authorFirst,authorBio,pubCode) VALUES (1,"Beach","Sebastian","purus gravida sagittis. Duis gravida. Praesent eu","ABC");
+INSERT INTO author (authorNum,authorLast,authorFirst,authorBio,pubCode) VALUES (2,"Cooper","Macy","Vivamus euismod","BCD");
+INSERT INTO author (authorNum,authorLast,authorFirst,authorBio,pubCode) VALUES (3,"Beard","Gray","euismod urna. Nullam lobortis quam a felis ullamcorper","CDE");
+INSERT INTO author (authorNum,authorLast,authorFirst,authorBio,pubCode) VALUES (4,"Berry","Shoshana","Aliquam","DEF");
+INSERT INTO author (authorNum,authorLast,authorFirst,authorBio,pubCode) VALUES (5,"Benson","Oren","enim. Nunc ut erat. Sed nunc est,","FGH");
+INSERT INTO author (authorNum,authorLast,authorFirst,authorBio,pubCode) VALUES (6,"Blanchard","Breanna","ultrices. Duis volutpat nunc sit amet metus.","GHI");
+INSERT INTO author (authorNum,authorLast,authorFirst,authorBio,pubCode) VALUES (7,"Hodge","Gemma","ullamcorper eu, euismod ac, fermentum vel,","HIJ");
+INSERT INTO author (authorNum,authorLast,authorFirst,authorBio,pubCode) VALUES (8,"Rodgers","Ingrid","quis diam. Pellentesque","JKL");
+INSERT INTO author (authorNum,authorLast,authorFirst,authorBio,pubCode) VALUES (9,"Mays","Armand","bibendum. Donec felis orci, adipiscing non, luctus sit amet,","KLM");
+INSERT INTO author (authorNum,authorLast,authorFirst,authorBio,pubCode) VALUES (10,"Gordon","Juliet","lorem, sit amet ultricies","LMN");
