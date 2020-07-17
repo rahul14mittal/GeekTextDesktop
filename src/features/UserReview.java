@@ -14,15 +14,21 @@ public class UserReview {
 		statement = connect.createStatement();
 	}
 	
-	public void runFeature() throws SQLException {
+	public void runFeature() throws Exception {
 		createReview("0189", "3333", "Book was great", "HOR", "3.0", "02/01/1998");
 	}
 	
-	public void createReview(String bookCode, String userID, String userComment, String genre, String rating, String date) throws SQLException {
+	public void createReview(String bookCode, String userID, String userComment, String genre, String rating, String date) throws Exception {
 		statement.executeUpdate("INSERT INTO BookRatings Values('"+bookCode+"', '" +userID+"', '" +userComment+"', '" +genre+"', " +
 	rating+", " +date+");");
+	pullRatings(bookCode);
 	}
 	
-	
+	public void pullRatings(String bookCode) throws Exception 
+	{
+		resultSet = statement.executeQuery("SELECT AVG(rating) FROM bookratings WHERE bookCode = " + bookCode + ";");
+		sql.printResult(resultSet);
+		System.out.println(resultSet);
+	}
 
 }
