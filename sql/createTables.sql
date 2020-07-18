@@ -8,4 +8,4 @@ CREATE TABLE Author (authorNum int PRIMARY KEY,authorLast VARCHAR(12),authorFirs
 CREATE TABLE BookDetails(bookCode int PRIMARY KEY,authorNum int,title VARCHAR(40),publisherCode CHAR(3),price double,genre CHAR(3),yearPub YEAR,copiesSold int,bookDescription text,averageRating DOUBLE default 0,CONSTRAINT author_exists FOREIGN KEY (authorNum) REFERENCES Author(authorNum));
 CREATE TABLE Users(userID int PRIMARY KEY, userName VARCHAR(32), userPass VARCHAR(40));
 CREATE TABLE BookRatings(bookCode CHAR(4), userID int, userName VARCHAR(32),userComment TEXT,genre CHAR(3),rating DOUBLE,subimtted DATE, CONSTRAINT user_exists FOREIGN KEY (userID) REFERENCES Users(userID));
-CREATE TABLE ShoppingCart(userID int PRIMARY KEY, userName VARCHAR(32), bookCode int,quantity int,CONSTRAINT user_exist FOREIGN KEY (userID) REFERENCES Users(userID),CONSTRAINT book_exists FOREIGN KEY (bookCode) REFERENCES BookDetails(bookCode));
+CREATE TABLE ShoppingCart(userID int PRIMARY KEY, bookCode int,quantity int,CONSTRAINT user_exist FOREIGN KEY (userID) REFERENCES Users(userID),CONSTRAINT book_exists FOREIGN KEY (bookCode) REFERENCES BookDetails(bookCode));
