@@ -20,6 +20,7 @@ public class Main {
 		//This run the script to create the database with empty tables
 		sql.executeScript("sql/createTables.sql");
 		
+		
 //		BookBrowsing bb = new BookBrowsing(sql);
 //      bb.runFeature();
         
@@ -32,6 +33,8 @@ public class Main {
 //		ProfileManagement pm = new ProfileManagement(sql);
 //		pm.runFeature();
 		
+//		ShoppingCart shc = new ShoppingCart(sql);
+//		shc.runFeatures();
 	}
 	
 	
