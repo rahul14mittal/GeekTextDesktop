@@ -25,7 +25,7 @@ public class ShoppingCart {
 		addToCart(2, 2, 2);
 		removeFromCart(2, 1, 3);
 		removeFromCart(1, 1, 1);
-		listItems(12);
+		listItems(2);
 	}
 	
 	public void createCart(int user) throws Exception { //userID int PRIMARY KEY, bookCode int,quantity int

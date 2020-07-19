@@ -17,10 +17,10 @@ public class Main {
 		sql.connect();
 		System.out.println("Connection successful.");
 
-//		sql.loadDatabase();
+		sql.loadDatabase();
 
-		BookBrowsing bb = new BookBrowsing(sql);
-        bb.runFeature();
+//		BookBrowsing bb = new BookBrowsing(sql);
+//        bb.runFeature();
 
 //      BookDetails bd = new BookDetails(sql);
 //      bd.runFeature();
@@ -31,8 +31,8 @@ public class Main {
 //		ProfileManagement pm = new ProfileManagement(sql);
 //		pm.runFeature();
 
-//		ShoppingCart shc = new ShoppingCart(sql);
-//		shc.runFeatures();
+		ShoppingCart shc = new ShoppingCart(sql);
+		shc.runFeatures();
 	}
 
 }
