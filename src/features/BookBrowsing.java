@@ -26,10 +26,10 @@ public class BookBrowsing {
     
     public void runFeature() throws SQLException
     {
-//    	browseByGenre("FIC");
+    	browseByGenre("FIC");
 //    	browseTopSellers();
 //    	browseByRating(2.4);
-    	browseByNumber(2);
+//    	browseByNumber(2);
     }
     
     public void browseByGenre(String genre) throws SQLException
