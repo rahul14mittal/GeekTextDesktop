@@ -73,13 +73,18 @@ public class MySQLConnect {
 			// execute query
 			statement.execute(line);
 		}
-		
-		System.out.println(sqlPath+" executed");
+
+		System.out.println(sqlPath + " executed");
 
 		// close file reader
 		if (reader != null) {
 			reader.close();
 		}
 
+	}
+
+	public void loadDatabase() throws Exception {
+		executeScript("sql/createTables.sql");
+		executeScript("sql/populateTables.sql");
 	}
 }
