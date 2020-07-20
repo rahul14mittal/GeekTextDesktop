@@ -15,7 +15,7 @@ public class UserReview {
 	}
 	
 	public void runFeature() throws Exception {
-		//createReview(1, 3, "Book was great", "HOR", "3.0", "02/01/1998");
+		//createReview(1, 3, "Book was great", "FIC", "3.0", "02/01/1998");
 	}
 	
 	public void createReview(int bookCode, int userID, String userComment, String genre, String rating, String date) throws Exception {
