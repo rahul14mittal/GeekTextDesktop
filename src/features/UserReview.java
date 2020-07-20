@@ -21,10 +21,10 @@ public class UserReview {
 	public void createReview(int bookCode, int userID, String userComment, String genre, String rating, String date) throws Exception {
 		statement.executeUpdate("INSERT INTO BookRatings Values("+bookCode+", " +userID+", '" +userComment+"', '" +genre+"', " +
 	rating+", " +date+");");
-	pullRatings(bookCode);
+	pullAvg(bookCode);
 	}
 	
-	public void pullRatings(int bookCode) throws Exception 
+	public void pullAvg(int bookCode) throws Exception 
 	{
 		resultSet = statement.executeQuery("SELECT AVG(rating) FROM bookratings WHERE bookCode = " + bookCode + ";");
 		sql.printResult(resultSet);
