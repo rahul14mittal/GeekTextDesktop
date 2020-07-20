@@ -31,8 +31,8 @@ public class Main {
 //		ProfileManagement pm = new ProfileManagement(sql);
 //		pm.runFeature();
 
-		ShoppingCart shc = new ShoppingCart(sql);
-		shc.runFeatures();
+//		ShoppingCart shc = new ShoppingCart(sql);
+//		shc.runFeatures();
 	}
 
 }
