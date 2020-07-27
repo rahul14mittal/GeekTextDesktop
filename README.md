@@ -1,1 +1,1 @@
-"# GeekText" 
+# GeekText Desktop App
